@@ -5,7 +5,11 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
 <h1>Título</h1>
+=======
+    
+>>>>>>> pedro
     </>
   )
 }

@@ -87,4 +87,30 @@ Vocês serão responsáveis por desenvolver **apenas o frontend** da aplicação
 - Documentação do frontend
 - Apresentação final
 
----
+-----------------------------------------------------------------
+
+Github Comandos
+
+# Clonar um repositório
+git clone <link-do-repositório>
+
+# Criar e mudar para uma nova branch
+git checkout -b nome-da-branch
+
+# Adicionar mudanças ao staging
+git add .
+
+# Fazer um commit com mensagem
+git commit -m "sua mensagem aqui"
+
+# Enviar a branch para o GitHub e criar o vínculo
+git push --set-upstream origin nome-da-branch
+
+# Puxar atualizações do repositório remoto
+git pull
+
+# Mudar para a branch principal (geralmente main ou master)
+git checkout main
+
+# Juntar uma branch na atual (ex: merge da 'pedro' na 'main')
+git merge nome-da-branch
