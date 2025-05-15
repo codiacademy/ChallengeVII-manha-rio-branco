@@ -17,6 +17,11 @@ export function Sidebar() {
               Minhas despesas
             </Link>
           </li>
+          <li>
+            <Link to={'/receita'} className='text-white text-xl font-bold'>
+              Receita
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
