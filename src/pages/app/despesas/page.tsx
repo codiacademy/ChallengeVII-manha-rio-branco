@@ -4,7 +4,9 @@ import { InputCard } from './components/InputCard'
 export default function Depesas() {
   return (
     <div className="p-6 space-y-6">
-      <h1 className="text-3xl font-bold text-white">Despesas</h1>
+      <div className="card mb-6">
+        <h1 className="text-3xl font-bold">Despesas</h1>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <InfoCard

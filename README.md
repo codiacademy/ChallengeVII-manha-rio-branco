@@ -114,3 +114,10 @@ git checkout main
 
 # Juntar uma branch na atual (ex: merge da 'pedro' na 'main')
 git merge nome-da-branch
+
+
+16/05/2025
+
+- Falta Responsividade (mobile)
+- Falta Tela de login, cadastro 
+- Opção de sair ao lado do usuário logado
