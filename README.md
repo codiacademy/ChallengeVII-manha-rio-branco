@@ -15,7 +15,7 @@ O **Codi Cash** é um software de gestão financeira que visa facilitar o contro
 
 ## 2. Escopo do Desafio
 
-Vocês serão responsáveis por desenvolver **apenas o frontend** da aplicação, utilizando tecnologias modernas como **HTML, CSS (Tailwind ou Bootstrap), JavaScript (React ou Vanilla)**, garantindo:
+Vocês serão responsáveis por desenvolver **apenas o frontend** da aplicação, utilizando tecnologias modernas como **HTML, CSS (Tailwind ou Bootstrap), TypeScript (React ou Vanilla)**, garantindo:
 
 - Interfaces responsivas
 - Boa usabilidade
@@ -63,7 +63,7 @@ Vocês serão responsáveis por desenvolver **apenas o frontend** da aplicação
 
 - HTML5, CSS3 e JavaScript
 - TailwindCSS (ou outro framework de UI)
-- ReactJS (opcional, mas recomendado)
+- ReactTS (opcional, mas recomendado)
 - Responsividade obrigatória (mobile first)
 - Estrutura modular de componentes
 
