@@ -1,4 +1,5 @@
 import { InfoCard } from './components/InfoCard'
+import ReceitaCard from './components/ReceitaCard'
 
 export default function Receita() {
   return (
@@ -42,16 +43,12 @@ export default function Receita() {
             placeholder="Ex: 15000"
             className="w-full p-3 rounded-md bg-[#111827] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          
         </div>
-      </div>
-
-      {/* Resumo */}
-      <div className="bg-[#111827] p-6 rounded-2xl shadow-md mt-6">
-        <h2 className="text-2xl font-semibold text-white mb-4">Resumo</h2>
-        <p className="text-gray-300 text-sm">
-          Este painel mostra os principais indicadores financeiros relacionados às suas receitas.
-        </p>
+        <ReceitaCard />  
       </div>
     </div>
+    
   )
+
 }

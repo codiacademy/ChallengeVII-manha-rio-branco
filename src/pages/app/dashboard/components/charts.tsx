@@ -94,10 +94,10 @@ export function CardCharts() {
 
       <CardFooter className='flex-col items-start gap-2 text-sm'>
         <div className='flex text-gray-50 gap-2 font-medium leading-none'>
-          Trending up by 5.2% this month <TrendingUp className='h-4 w-4' />
+           Aumento de 5,2% neste mês <TrendingUp className='h-4 w-4' />
         </div>
         <div className=' leading-none text-gray-300'>
-          Showing total visitors for the last 6 months
+          Exibindo total de visitantes nos ultimos 6 meses
         </div>
       </CardFooter>
     </Card>

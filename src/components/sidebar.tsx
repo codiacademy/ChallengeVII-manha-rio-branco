@@ -1,50 +1,29 @@
+import { ThemeToggle } from '@/components/theme-toggle'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
 
 export function Sidebar() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark')
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme') as 'light' | 'dark'
-    if (saved) {
-      setTheme(saved)
-      document.documentElement.classList.toggle('dark', saved === 'dark')
-    } else {
-      document.documentElement.classList.add('dark')
-      setTheme('dark')
-      localStorage.setItem('theme', 'dark')
-    }
-  }, [])
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
-    document.documentElement.classList.toggle('dark', newTheme === 'dark')
-    localStorage.setItem('theme', newTheme)
-    setTheme(newTheme)
-  }
-
   return (
-    <div className="h-full flex flex-col gap-8">
-      <button
-        onClick={toggleTheme}
-        className="theme-toggle px-4 py-2 border rounded-md font-medium text-sm"
-      >
-        {theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
-      </button>
+    <div className="flex flex-col gap-6 p-4 min-h-screen">
+      <ThemeToggle />
 
       <nav className="flex flex-col gap-6 mt-4">
-        <Link to={'/'} className='text-[var(--sidebar-foreground)] text-xl font-bold'>
+        <Link
+          to="/"
+          className="bg-white dark:bg-gray-800 text-black dark:text-white text-xl font-bold py-2 px-4 rounded-lg text-center shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+        >
           Dashboard
         </Link>
+
         <Link
           to="/despesas"
-          className="text-[--sidebar-foreground] text-xl font-bold hover:underline"
+          className="bg-white dark:bg-gray-800 text-black dark:text-white text-xl font-bold py-2 px-4 rounded-lg text-center shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
         >
           Minhas despesas
         </Link>
+
         <Link
           to="/receita"
-          className="text-[--sidebar-foreground] text-xl font-bold hover:underline"
+          className="bg-white dark:bg-gray-800 text-black dark:text-white text-xl font-bold py-2 px-4 rounded-lg text-center shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition"
         >
           Receita
         </Link>
