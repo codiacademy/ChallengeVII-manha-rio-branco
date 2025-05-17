@@ -1,10 +1,15 @@
-import { RouterProvider } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { routes } from './routes'
+import CadastrarVendas from './pages/cadastrar-vendas';
 
 export function App() {
   return (
-    <div>
-      <RouterProvider router={routes} />
-    </div>
-  )
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/cadastrar-vendas" element={<CadastrarVendas />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
