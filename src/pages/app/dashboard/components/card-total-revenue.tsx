@@ -13,7 +13,7 @@ export function CardTotalRevenue() {
       </CardHeader>
 
       <CardContent>
-        <strong className='text-2xl text-gray-100'>$45,231.89</strong>
+        <strong className='text-2xl text-gray-100'>R$45,231.89</strong>
       </CardContent>
     </Card>
   )
