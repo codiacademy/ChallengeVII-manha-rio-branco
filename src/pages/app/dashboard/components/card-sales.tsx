@@ -3,17 +3,14 @@ import { CreditCard } from 'lucide-react'
 
 export function CardSales() {
   return (
-    <Card className='bg-gray-800 border border-gray-700/30'>
-      <CardHeader>
-        <div className='flex items-center justify-between'>
-          <CardTitle className='text-xl text-gray-300'>Sales</CardTitle>
-
-          <CreditCard className='size-6 text-gray-300' />
-        </div>
+    <Card className="w-full bg-gray-800 text-white shadow transition-all">
+      <CardHeader className="flex items-center justify-between mb-2">
+        <CardTitle className="text-sm font-semibold">Vendas</CardTitle>
+        <CreditCard className="w-5 h-5 text-white opacity-60" />
       </CardHeader>
 
       <CardContent>
-        <strong className='text-2xl text-gray-100'>+12,234</strong>
+        <p className="text-2xl font-bold">+12.234</p>
       </CardContent>
     </Card>
   )

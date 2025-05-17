@@ -6,7 +6,7 @@ export function CardActiveNow() {
     <Card className='bg-gray-800 border border-gray-700/30'>
       <CardHeader>
         <div className='flex items-center justify-between'>
-          <CardTitle className='text-xl text-gray-300'>Active now</CardTitle>
+          <CardTitle className='text-xl text-gray-300'>Ativos Agora</CardTitle>
 
           <ChartColumnIncreasingIcon className='size-6 text-gray-300' />
         </div>
