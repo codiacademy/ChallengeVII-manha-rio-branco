@@ -24,8 +24,8 @@
 }
 
 /* ======= BASE GLOBAL ======= */
-html, body {
-  min-height: 100vh;
+html, body, #root {
+  height: 100%;
   margin: 0;
   font-family: sans-serif;
   background-color: var(--background);
@@ -48,7 +48,7 @@ main {
   color: var(--sidebar-foreground);
   width: 250px;
   padding: 1rem;
-  height: 100vh;
+  min-height: 100vh;
   transition: background-color 0.3s, color 0.3s;
 }
 
