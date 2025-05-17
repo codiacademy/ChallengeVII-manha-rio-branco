@@ -1,5 +1,6 @@
 import { InfoCard } from '../receita/components/InfoCard'
 import { InputCard } from './components/InputCard'
+import ResumoCard  from  './components/ResumoCard'
 
 export default function Depesas() {
   return (
@@ -36,12 +37,8 @@ export default function Depesas() {
         />
       </div>
 
-      <div className="bg-[#111827] p-6 rounded-2xl shadow-md mt-6">
-        <h2 className="text-2xl font-semibold text-white mb-4">Resumo</h2>
-        <p className="text-gray-300 text-sm">
-          Aqui você pode acompanhar o total de gastos e ajustar seu limite de despesas mensais.
-        </p>
-      </div>
+      <ResumoCard />
     </div>
+    
   )
 }
