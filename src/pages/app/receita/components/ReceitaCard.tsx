@@ -2,7 +2,7 @@ export default function ReceitaCard() {
     return (
     <div className="bg-[#1f2937] p-6 rounded-2xl shadow-md">
         <label className="text-white block mb-2 text-sm font-semibold">
-            Resumo da Receita
+            Resumo da Receita |
         </label>
         <div className="mb-4">
             <h3 className="text-white text-base font-medium">Ganhos |</h3>

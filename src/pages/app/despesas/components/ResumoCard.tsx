@@ -13,7 +13,7 @@ export default function ResumoCard() {
     </div>
 
     <div>
-        <h3 className="text-white text-base font-medium">Total de Despesas</h3>
+        <h3 className="text-white text-base font-medium">Total de Despesas |</h3>
         <p className="text-2xl text-red-400 font-bold">R$ 8.400,00</p>
         <p className="text-sm text-gray-400">Gastos acumulados este mês</p>
     </div>
