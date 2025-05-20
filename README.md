@@ -113,4 +113,3 @@ git pull
 git checkout main
 
 # Juntar uma branch na atual (ex: merge da 'pedro' na 'main')
-git merge nome-da-branch
