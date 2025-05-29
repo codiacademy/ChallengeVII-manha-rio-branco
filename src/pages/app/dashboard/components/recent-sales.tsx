@@ -14,7 +14,7 @@ const data = [
     avatar: User,
     name: 'John Doe',
     email: 'johndoe@example.com',
-    amount: '$1000',
+    amount: 'R$ 1000,00',
   },
 
   {
@@ -22,7 +22,7 @@ const data = [
     avatar: User,
     name: 'John Doe',
     email: 'johndoe@example.com',
-    amount: '$1004',
+    amount: 'R$ 1004,00',
   },
 
   {
@@ -30,7 +30,7 @@ const data = [
     avatar: User,
     name: 'John Doe',
     email: 'johndoe@example.com',
-    amount: '$2338',
+    amount: 'R$ 2338,00',
   },
 
   {
@@ -38,7 +38,7 @@ const data = [
     avatar: User,
     name: 'John Doe',
     email: 'johndoe@example.com',
-    amount: '$89',
+    amount: 'R$ 89,00',
   },
 
   {
@@ -46,7 +46,7 @@ const data = [
     avatar: User,
     name: 'John Doe',
     email: 'johndoe@example.com',
-    amount: '$100',
+    amount: 'R$ 100,00',
   },
 ]
 
@@ -54,9 +54,9 @@ export function RecentSales() {
   return (
     <Card className='bg-gray-800 border border-gray-700/30 h-fit max-w-xl w-full'>
       <CardHeader>
-        <CardTitle className='text-xl text-white'>Recent Sales</CardTitle>
+        <CardTitle className='text-xl text-white'>Vendas Recentes</CardTitle>
         <CardDescription className='text-sm text-gray-50'>
-          Yout made 265 sales this month.
+          Você realizou 265 vendas este mês.
         </CardDescription>
       </CardHeader>
 

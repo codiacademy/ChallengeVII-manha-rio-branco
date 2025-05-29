@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { DollarSign } from 'lucide-react'
 
 export function CardTotalRevenue() {
   return (
@@ -7,8 +6,7 @@ export function CardTotalRevenue() {
       <CardHeader>
         <div className='flex items-center justify-between'>
           <CardTitle className='text-xl text-gray-300'>Total</CardTitle>
-
-          <DollarSign className='size-6 text-gray-300' />
+          <span className="text-gray-300 text-[1.5rem]">R$</span>
         </div>
       </CardHeader>
 
