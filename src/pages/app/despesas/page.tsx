@@ -1,6 +1,8 @@
 import { InfoCard } from '../receita/components/InfoCard'
 import { InputCard } from './components/InputCard'
-import ResumoCard  from  './components/ResumoCard'
+import ResumoCard from './components/ResumoCard'
+import { RecentSales } from '../dashboard/components/RecentSales'
+import { CreateSaleForm } from '../dashboard/components/CreateSaleForm'
 
 export default function Depesas() {
   return (
@@ -29,16 +31,19 @@ export default function Depesas() {
           label="Informe o valor gasto"
           placeholder="Ex: 8400"
           ringColor="focus:ring-red-500"
+          buttonText="Adicionar Despesa"
+          buttonColor="bg-red-500 hover:bg-red-400"
         />
         <InputCard
           label="Informe o limite do mês"
           placeholder="Ex: 10000"
           ringColor="focus:ring-yellow-500"
+          buttonText="Definir o Limite mensal"
+          buttonColor="bg-yellow-500 hover:bg-yellow-400"
         />
       </div>
 
       <ResumoCard />
     </div>
-    
   )
 }

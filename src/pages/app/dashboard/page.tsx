@@ -3,7 +3,7 @@ import { CardSales } from './components/card-sales'
 import { CardSubscriptions } from './components/card-subscriptions'
 import { CardTotalRevenue } from './components/card-total-revenue'
 import { CardCharts } from './components/charts'
-import { RecentSales } from './components/recent-sales'
+import { RecentSales } from './components/RecentSales'
 
 export default function DashboardPage() {
   return (
@@ -30,5 +30,6 @@ export default function DashboardPage() {
         <RecentSales />
       </div>
     </div>
+    
   )
 }

@@ -25,30 +25,34 @@ export default function Receita() {
         />
       </div>
 
-      {/* Campos de entrada */}
+      {/* Campos de entrada + botões */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-[#1f2937] p-6 rounded-2xl shadow-md">
-          <label className="text-white block mb-2 text-sm font-semibold">Informe sua receita</label>
+        <div className="bg-[#1f2937] p-6 rounded-2xl shadow-md space-y-4">
+          <label className="text-white block text-sm font-semibold">Informe sua receita</label>
           <input
             type="number"
             placeholder="Ex: 12500"
             className="w-full p-3 rounded-md bg-[#111827] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
+          <button className="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md">
+            Adicionar Receita
+          </button>
         </div>
 
-        <div className="bg-[#1f2937] p-6 rounded-2xl shadow-md">
-          <label className="text-white block mb-2 text-sm font-semibold">Informe a meta do mês</label>
+        <div className="bg-[#1f2937] p-6 rounded-2xl shadow-md space-y-4">
+          <label className="text-white block text-sm font-semibold">Informe a meta do mês</label>
           <input
             type="number"
             placeholder="Ex: 15000"
             className="w-full p-3 rounded-md bg-[#111827] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          
+          <button className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-md">
+            Definir Meta
+          </button>
         </div>
-        <ReceitaCard />  
+
+        <ReceitaCard />
       </div>
     </div>
-    
   )
-
 }
