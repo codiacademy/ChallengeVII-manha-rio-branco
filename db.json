@@ -1,0 +1,10 @@
+{
+  "sales": [
+    {
+      "id": "97c3",
+      "name": "João Teste",
+      "email": "joao@gmail.com",
+      "amount": "R$ 1000.00"
+    }
+  ]
+}
