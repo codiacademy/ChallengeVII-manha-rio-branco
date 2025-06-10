@@ -1,0 +1,127 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.loginCard {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+}
+
+.loginHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.welcomeTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.inputGroup {
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.inputField {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    transition: all 0.2s;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #a243d2;
+    box-shadow: 0 0 0 3px rgba(162, 67, 210, 0.1);
+}
+
+.inputField::placeholder {
+    color: #94a3b8;
+}
+
+.optionsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #475569;
+    cursor: pointer;
+}
+
+.rememberMe input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #a243d2;
+}
+
+.forgotPassword {
+    color: #a243d2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgotPassword:hover {
+    text-decoration: underline;
+}
+
+.loginButton {
+    background-color: #a243d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.loginButton:hover {
+    background-color: #8b5cf6;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+    .loginCard {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .optionsRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}
