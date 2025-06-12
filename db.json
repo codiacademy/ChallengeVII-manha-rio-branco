@@ -1,14 +1,24 @@
 {
-  "sales": [
-    {
-      "id": "1",
-      "name": "dad",
-      "email": "adas@gmail.com",
-      "amount": "R$ 23.00"
-    }
-  ],
+  "sales": [],
   "despesas": [
-  
+    {
+      "id": 1749758498980,
+      "valor": 500,
+      "descricao": "aluguel",
+      "createdAt": "2025-06-12T20:01:38.980Z"
+    },
+    {
+      "id": 1749758515042,
+      "valor": 50,
+      "descricao": "pao",
+      "createdAt": "2025-06-12T20:01:55.042Z"
+    },
+    {
+      "id": 1749758551105,
+      "valor": 2000,
+      "descricao": "servidor",
+      "createdAt": "2025-06-12T20:02:31.105Z"
+    }
   ],
   "budgetLimit": 1000
 }
