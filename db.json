@@ -1,10 +1,14 @@
 {
   "sales": [
     {
-      "id": "97c3",
-      "name": "João Teste",
-      "email": "joao@gmail.com",
-      "amount": "R$ 1000.00"
+      "id": "1",
+      "name": "dad",
+      "email": "adas@gmail.com",
+      "amount": "R$ 23.00"
     }
-  ]
+  ],
+  "despesas": [
+  
+  ],
+  "budgetLimit": 1000
 }

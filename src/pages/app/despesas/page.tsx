@@ -1,10 +1,22 @@
-import { InfoCard } from '../receita/components/InfoCard'
-import { InputCard } from './components/InputCard'
-import ResumoCard from './components/ResumoCard'
-import { RecentSales } from '../dashboard/components/RecentSales'
-import { CreateSaleForm } from '../dashboard/components/CreateSaleForm'
+import { useState } from "react";
+import { InfoCard } from "../receita/components/InfoCard";
+import { InputCard } from "./components/InputCard";
+import ResumoCard from "./components/ResumoCard";
 
 export default function Depesas() {
+  const [despesas, setDespesas] = useState(0);
+  const [limite, setLimite] = useState(10000);
+
+  // Adiciona uma nova despesa (soma o valor)
+  const adicionarDespesa = (valor: number) => {
+    setDespesas((prev) => prev + valor);
+  };
+
+  // Define o limite mensal
+  const definirLimite = (valor: number) => {
+    setLimite(valor);
+  };
+
   return (
     <div className="p-6 space-y-6">
       <div className="card mb-6">
@@ -14,13 +26,13 @@ export default function Depesas() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <InfoCard
           title="Total de Despesas"
-          value="R$ 8.400,00"
+          value={`R$ ${despesas.toFixed(2)}`}
           subtitle="Gastos acumulados este mês"
           color="text-red-400"
         />
         <InfoCard
           title="Limite Mensal"
-          value="R$ 10.000,00"
+          value={`R$ ${limite.toFixed(2)}`}
           subtitle="Orçamento planejado para o mês"
           color="text-yellow-400"
         />
@@ -33,6 +45,7 @@ export default function Depesas() {
           ringColor="focus:ring-red-500"
           buttonText="Adicionar Despesa"
           buttonColor="bg-red-500 hover:bg-red-400"
+          onValueSubmit={adicionarDespesa}
         />
         <InputCard
           label="Informe o limite do mês"
@@ -40,10 +53,11 @@ export default function Depesas() {
           ringColor="focus:ring-yellow-500"
           buttonText="Definir o Limite mensal"
           buttonColor="bg-yellow-500 hover:bg-yellow-400"
+          onValueSubmit={definirLimite}
         />
       </div>
 
-      <ResumoCard />
+      <ResumoCard despesas={despesas} limite={limite} />
     </div>
-  )
+  );
 }
