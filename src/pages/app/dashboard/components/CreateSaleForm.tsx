@@ -4,44 +4,46 @@ interface CreateSaleFormProps {
   onNewSale: () => void;
 }
 
-export function CreateSaleForm({ onNewSale }: CreateSaleFormProps){
-  const[name, setName]= useState("");
-  const[email, setEmail]= useState("");
-  const[amount, setAmount]= useState("");
+export function CreateSaleForm({ onNewSale }: CreateSaleFormProps) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [amount, setAmount] = useState("");
 
-  const handleSubmit = async(e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
 
-    const newSale= {
+    const newSale = {
       name,
       email,
-      amount: `R$ ${parseFloat(amount).toFixed(2)}`,
+      valor: parseFloat(amount),
+      data: new Date().toISOString(),
     };
 
+
     try {
-      const res = await fetch("http://localhost:3001/sales",{
+      const res = await fetch("http://localhost:3001/sales", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newSale),
       });
 
-       if (!res.ok) throw new Error("Erro ao cadastrar venda");
+      if (!res.ok) throw new Error("Erro ao cadastrar venda");
 
 
-       //limpand form
-       setName("");
-       setEmail("");
-       setAmount("");
+      //limpand form
+      setName("");
+      setEmail("");
+      setAmount("");
 
 
-       onNewSale();
-    } catch(err){
+      onNewSale();
+    } catch (err) {
       alert("Erro ao cadastrar venda")
       console.error(err);
     }
   }
-    return (
+  return (
     <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg text-white w-full h-full">
       <h2 className="text-xl font-bold mb-4">Lançar Nova Venda</h2>
 
@@ -93,4 +95,3 @@ export function CreateSaleForm({ onNewSale }: CreateSaleFormProps){
     </div>
   );
 };
-  
