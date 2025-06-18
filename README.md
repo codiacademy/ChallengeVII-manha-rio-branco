@@ -113,3 +113,9 @@ git pull
 git checkout main
 
 # Juntar uma branch na atual (ex: merge da 'pedro' na 'main')
+
+# Instalar o json-server no terminal do projeto
+npm install -D json-server
+
+# Comando pra rodar o json-server
+npm run json-server
