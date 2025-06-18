@@ -14,7 +14,7 @@ interface Sale {
   id: number;
   name: string;
   email: string;
-  amount: string;
+  amount: number | string;
 }
 
 export function RecentSales() {
@@ -45,27 +45,33 @@ export function RecentSales() {
 
       <CardContent>
         <div className="flex flex-col lg:flex-row gap-6">
-          
+
           <div className="flex-1 space-y-6">
-            {sales.map((item) => {
-              return (
-                <div
-                  key={item.id}
-                  className="flex md:flex-row flex-col md:items-center items-start justify-between gap-5"
-                >
-                  <Avatar className="w-10 h-10 bg-gray-400 flex items-center justify-center">
-                    <User className="text-gray-800" />
-                  </Avatar>
+            {sales.map((item) => (
+              <div
+                key={item.id}
+                className="flex md:flex-row flex-col md:items-center items-start justify-between gap-5"
+              >
+                <Avatar className="w-10 h-10 bg-gray-400 flex items-center justify-center">
+                  <User className="text-gray-800" />
+                </Avatar>
 
-                  <div className="flex-1 flex flex-col gap-1">
-                    <span className="font-medium text-gray-200">{item.name}</span>
-                    <span className="text-sm text-gray-400">{item.email}</span>
-                  </div>
-
-                  <strong className="text-gray-400">{item.amount}</strong>
+                <div className="flex-1 flex flex-col gap-1">
+                  <span className="font-medium text-gray-200">
+                    {item.name && item.name.trim().length > 0 ? item.name : "Receita Adicionada Manualmente"}
+                  </span>
+                  <span className="text-sm text-gray-400">{item.email}</span>
                 </div>
-              );
-            })}
+
+                <strong className="text-gray-400">
+                  {typeof item.amount === 'number'
+                    ? `R$ ${item.amount.toFixed(2)}`
+                    : `R$ ${item.amount}`}
+                </strong>
+              </div>
+            ))}
+
+
           </div>
 
           <div className="flex-1">

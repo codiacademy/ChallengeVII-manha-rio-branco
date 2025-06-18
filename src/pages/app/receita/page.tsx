@@ -2,9 +2,10 @@ import { InfoCard } from './components/InfoCard'
 import ReceitaCard from './components/ReceitaCard'
 import { useEffect, useState } from 'react'
 
-interface Venda{
-  valor:number
-  data:string
+interface Venda {
+  valor?: number
+  amount: number
+  data: string
 }
 
 export default function Receita() {
@@ -27,23 +28,26 @@ export default function Receita() {
   }, [])
 
   const handleAdicionarReceita = async () => {
-    if(!novaReceita) return
+    if (!novaReceita) return
 
     await fetch('http://localhost:3001/sales', {
-      method:"POST",
-      headers: {"Content-Type": "application/json" },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        valor: novaReceita,
+        amount: novaReceita,
         data: new Date().toISOString(),
       }),
     })
 
-    setNovaReceita(0);
-    carregarVenda();
+    setNovaReceita(0)
+    carregarVenda()
   }
 
-  const totalReceita = vendas.reduce((acc, venda) => acc + Number(venda.valor), 0)
- 
+  const totalReceita = vendas.reduce((acc, venda) => {
+    const valor = Number(venda.amount ?? venda.valor)
+    return acc + (isNaN(valor) ? 0 : valor)
+  }, 0)
+
   return (
     <div className="p-6 space-y-6">
       <div className="card mb-6">

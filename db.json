@@ -1,9 +1,14 @@
 {
   "sales": [
     {
-      "id": "85ca",
-      "valor": 50,
-      "data": "2025-06-18T00:39:24.793Z"
+      "id": "a4ec",
+      "amount": 10,
+      "data": "2025-06-18T15:53:48.830Z"
+    },
+    {
+      "id": "cab0",
+      "amount": 10,
+      "data": "2025-06-18T15:54:56.366Z"
     }
   ],
   "despesas": [
@@ -24,6 +29,18 @@
       "valor": 2000,
       "descricao": "servidor",
       "createdAt": "2025-06-12T20:02:31.105Z"
+    },
+    {
+      "id": "1750261820536",
+      "valor": 1000,
+      "descricao": "pao",
+      "createdAt": "2025-06-18T15:50:20.536Z"
+    },
+    {
+      "id": "1750261898202",
+      "valor": 500,
+      "descricao": "alface",
+      "createdAt": "2025-06-18T15:51:38.202Z"
     }
   ],
   "budgetLimit": 1000

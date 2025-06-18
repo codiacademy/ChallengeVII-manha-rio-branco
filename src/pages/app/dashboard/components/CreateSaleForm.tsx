@@ -16,7 +16,7 @@ export function CreateSaleForm({ onNewSale }: CreateSaleFormProps) {
     const newSale = {
       name,
       email,
-      valor: parseFloat(amount),
+      amount: parseFloat(amount),
       data: new Date().toISOString(),
     };
 
